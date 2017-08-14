@@ -1,26 +1,6 @@
-class Node:
+from Node import Node
 
-    def __init__(self, data, next=None):
-        self.data = data
-        self.next = next
-
-    def print_node_list(self):
-        cur = self
-        node_list = []
-        while cur is not None:
-            node_list.append(str(cur.data))
-            cur = cur.next
-        print(" -> ".join(node_list))
-
-    def __len__(self):
-        count = 0
-        walk = self
-        while walk is not None:
-            count += 1
-            walk = walk.next
-        return count
-
-# if the digits are stored in forward order...
+# if the digits are stored in forward order:
 def sum_lists(head1, head2):
     if head1 is None:
         return head2
@@ -71,12 +51,12 @@ node4.next = node5
 node5.next = node6
 
 # Should be 9 -> 1 -> 2
-print(sum_lists(node1, node4).print_node_list())
+sum_lists(node1, node4).print_node_list()
 
 node4.data = 5
 # Should be 1 -> 2 -> 1 -> 2
-print(sum_lists(node1, node4).print_node_list())
+sum_lists(node1, node4).print_node_list()
 
 node4.next = Node(3, node4.next)
 # Should be 6 -> 0 -> 1 -> 2
-print(sum_lists(node1, node4).print_node_list())
+sum_lists(node1, node4).print_node_list()
