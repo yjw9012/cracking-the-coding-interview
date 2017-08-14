@@ -44,4 +44,6 @@ node5.next = node2
 node2.next = node6
 
 n = remove_dups(node4)
+
+# Should be 1 -> 3
 n.print_node_list()
