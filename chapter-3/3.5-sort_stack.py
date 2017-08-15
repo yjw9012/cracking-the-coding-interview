@@ -15,10 +15,12 @@ def sort_stack(S):
     while len(stack_helper) > 0:
         S.append(stack_helper.pop())
 
-S = [5,4,1,3,2]
-sort_stack(S)
-for i in range(1,6):
-    assert S.pop() == i
+if __name__ == "__main__":
+
+    S = [5,4,1,3,2]
+    sort_stack(S)
+    for i in range(1,6):
+        assert S.pop() == i
 
 # Misunderstood the problem:
 class SortStack():
@@ -48,14 +50,15 @@ class SortStack():
     def is_empty(self):
         return len(self.data) == 0
 
+if __name__ == "__main__":
 
-S = SortStack()
+    S = SortStack()
 
-S.push(5)
-S.push(1)
-S.push(2)
-S.push(4)
-S.push(3)
+    S.push(5)
+    S.push(1)
+    S.push(2)
+    S.push(4)
+    S.push(3)
 
-for i in range(1,6):
-    assert S.pop() == i
+    for i in range(1,6):
+        assert S.pop() == i

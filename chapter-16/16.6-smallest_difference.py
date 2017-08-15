@@ -27,8 +27,9 @@ def get_smallest_diff_better(arr1, arr2):
             arr2_idx += 1
     return smallest_diff
 
+if __name__ == "__main__":
 
-arr1 = [1, 3, 15, 11, 2]
-arr2 = [23, 127, 235, 19, 8]
+    arr1 = [1, 3, 15, 11, 2]
+    arr2 = [23, 127, 235, 19, 8]
 
-print(get_smallest_diff_better(arr1, arr2))
+    assert get_smallest_diff_better(arr1, arr2) == 3

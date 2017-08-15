@@ -56,48 +56,50 @@ class SetOfStacks:
             return 0
         return self.STACK_CAPACITY * (len(self.stacks) - 1) + len(self.stacks[-1])
 
-S = SetOfStacks()
+if __name__ == "__main__":
 
-S.push(1)
-S.push(2)
-S.push(3)
+    S = SetOfStacks()
 
-S.push(4)
-S.push(5)
-S.push(6)
+    S.push(1)
+    S.push(2)
+    S.push(3)
 
-S.push(7)
-S.push(8)
+    S.push(4)
+    S.push(5)
+    S.push(6)
 
-print(S.stacks)
+    S.push(7)
+    S.push(8)
 
-for i in range(8,0,-1):
-    assert S.pop() == i
+    print(S.stacks)
 
-assert S.is_empty()
+    for i in range(8,0,-1):
+        assert S.pop() == i
+
+    assert S.is_empty()
 
 
-# Test case for Follow-up
+    # Test case for Follow-up
 
-S = SetOfStacks()
+    S = SetOfStacks()
 
-S.push(1)
-S.push(2)
-S.push(3)
+    S.push(1)
+    S.push(2)
+    S.push(3)
 
-S.push(4)
-S.push(5)
-S.push(6)
+    S.push(4)
+    S.push(5)
+    S.push(6)
 
-S.push(7)
-S.push(8)
-S.push(9)
+    S.push(7)
+    S.push(8)
+    S.push(9)
 
-assert S.popAt(0) == 3
-print(S.stacks)
+    assert S.popAt(0) == 3
+    print(S.stacks)
 
-assert S.popAt(1) == 7
-print(S.stacks)
+    assert S.popAt(1) == 7
+    print(S.stacks)
 
-assert S.popAt(2) == 9
-print(S.stacks)
+    assert S.popAt(2) == 9
+    print(S.stacks)

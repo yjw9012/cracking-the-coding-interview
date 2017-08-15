@@ -37,26 +37,27 @@ def add_zero_nodes(head1, head2):
             short_list = new_head
     return short_list, long_list
 
+if __name__ == "__main__":
 
-node1 = Node(6)
-node2 = Node(1)
-node3 = Node(7)
-node1.next = node2
-node2.next = node3
+    node1 = Node(6)
+    node2 = Node(1)
+    node3 = Node(7)
+    node1.next = node2
+    node2.next = node3
 
-node4 = Node(2)
-node5 = Node(9)
-node6 = Node(5)
-node4.next = node5
-node5.next = node6
+    node4 = Node(2)
+    node5 = Node(9)
+    node6 = Node(5)
+    node4.next = node5
+    node5.next = node6
 
-# Should be 9 -> 1 -> 2
-sum_lists(node1, node4).print_node_list()
+    # Should be 9 -> 1 -> 2
+    sum_lists(node1, node4).print_node_list()
 
-node4.data = 5
-# Should be 1 -> 2 -> 1 -> 2
-sum_lists(node1, node4).print_node_list()
+    node4.data = 5
+    # Should be 1 -> 2 -> 1 -> 2
+    sum_lists(node1, node4).print_node_list()
 
-node4.next = Node(3, node4.next)
-# Should be 6 -> 0 -> 1 -> 2
-sum_lists(node1, node4).print_node_list()
+    node4.next = Node(3, node4.next)
+    # Should be 6 -> 0 -> 1 -> 2
+    sum_lists(node1, node4).print_node_list()

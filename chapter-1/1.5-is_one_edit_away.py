@@ -36,18 +36,20 @@ def is_one_edit_away(s1, s2):
 
     return True
 
-s1 = "pale"
-s2 = "ple"
-assert is_one_edit_away(s1, s2)
+if __name__ == "__main__":
 
-s1 = "pales"
-s2 = "pale"
-assert is_one_edit_away(s1, s2)
+    s1 = "pale"
+    s2 = "ple"
+    assert is_one_edit_away(s1, s2)
 
-s1 = "pale"
-s2 = "bale"
-assert is_one_edit_away(s1, s2)
+    s1 = "pales"
+    s2 = "pale"
+    assert is_one_edit_away(s1, s2)
 
-s1 = "pale"
-s2 = "bake"
-assert not is_one_edit_away(s1, s2)
+    s1 = "pale"
+    s2 = "bale"
+    assert is_one_edit_away(s1, s2)
+
+    s1 = "pale"
+    s2 = "bake"
+    assert not is_one_edit_away(s1, s2)

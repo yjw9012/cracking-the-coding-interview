@@ -1,5 +1,7 @@
 def rotate_matrix(matrix):
-    if len(matrix) == 0 or len(matrix) != len(matrix[0]):
+    if len(matrix) == 0:
+        return matrix
+    if len(matrix) != len(matrix[0]):
         raise Exception("Matrix is not valid for rotation")
 
     dimension = len(matrix)
@@ -14,25 +16,25 @@ def rotate_matrix(matrix):
             start_idx = next_idx
 
 
+if __name__ == "__main__":
 
-matrix = [[0] * 3 for i in range(3)]
+    matrix = [[0] * 3 for i in range(3)]
 
-matrix[0][1] = 1
-matrix[0][2] = 2
-matrix[1][0] = 3
-matrix[1][1] = 4
-matrix[1][2] = 5
-matrix[2][0] = 6
-matrix[2][1] = 7
-matrix[2][2] = 8
+    matrix[0][1] = 1
+    matrix[0][2] = 2
+    matrix[1][0] = 3
+    matrix[1][1] = 4
+    matrix[1][2] = 5
+    matrix[2][0] = 6
+    matrix[2][1] = 7
+    matrix[2][2] = 8
 
-rotate_matrix(matrix)
+    rotate_matrix(matrix)
 
-print(matrix)
+    print(matrix)
 
+    matrix = []
+    print(matrix)
 
-matrix = [[0] * 2 for i in range(4)]
-rotate_matrix(matrix)
-
-matrix = []
-rotate_matrix(matrix)
+    matrix = [[0] * 2 for i in range(4)]
+    rotate_matrix(matrix)

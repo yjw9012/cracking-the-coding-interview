@@ -18,14 +18,15 @@ class MyQueue:
             else:
                 raise Exception("Queue is empty")
 
+if __name__ == "__main__":
 
-Q = MyQueue()
+    Q = MyQueue()
 
-Q.enqueue(1)
-Q.enqueue(2)
-Q.enqueue(3)
-Q.enqueue(4)
-Q.enqueue(5)
+    Q.enqueue(1)
+    Q.enqueue(2)
+    Q.enqueue(3)
+    Q.enqueue(4)
+    Q.enqueue(5)
 
-for i in range(1,6):
-    assert Q.dequeue() == i
+    for i in range(1,6):
+        assert Q.dequeue() == i

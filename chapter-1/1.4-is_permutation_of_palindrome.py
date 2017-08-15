@@ -30,22 +30,22 @@ def is_perm_of_palindrome_bit(s):
 def get_bit_representation(char):
     return 1 << ord(char)-ord('a')
 
+if __name__ == "__main__":
 
+    s = "aabbccdd"
+    assert is_perm_of_palindrome(s)
 
-s = "aabbccdd"
-print(is_perm_of_palindrome(s))
+    s = "aabbccdde"
+    assert is_perm_of_palindrome(s)
 
-s = "aabbccdde"
-print(is_perm_of_palindrome(s))
+    s = "abcde"
+    assert not is_perm_of_palindrome(s)
 
-s = "abcde"
-print(is_perm_of_palindrome(s))
+    s = "aabbccdd"
+    assert is_perm_of_palindrome_bit(s)
 
-s = "aabbccdd"
-print(is_perm_of_palindrome_bit(s))
+    s = "aabbccdde"
+    assert is_perm_of_palindrome_bit(s)
 
-s = "aabbccdde"
-print(is_perm_of_palindrome_bit(s))
-
-s = "abcde"
-print(is_perm_of_palindrome_bit(s))
+    s = "abcde"
+    assert not is_perm_of_palindrome_bit(s)

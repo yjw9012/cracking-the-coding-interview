@@ -30,20 +30,26 @@ def remove_dups(n):
 
     return n
 
-node1 = Node(1)
-node2 = Node(2)
-node3 = Node(3)
-node4 = Node(4)
-node5 = Node(4)
-node6 = Node(2)
+if __name__ == "__main__":
 
-node4.next = node1
-node1.next = node3
-node3.next = node5
-node5.next = node2
-node2.next = node6
+    node1 = Node(1)
+    node2 = Node(2)
+    node3 = Node(3)
+    node4 = Node(4)
+    node5 = Node(4)
+    node6 = Node(2)
 
-n = remove_dups(node4)
+    node4.next = node1
+    node1.next = node3
+    node3.next = node5
+    node5.next = node2
+    node2.next = node6
 
-# Should be 1 -> 3
-n.print_node_list()
+    n = remove_dups(node4)
+
+    # Should be 1 -> 3
+    n.print_node_list()
+
+    assert n.data == 1
+    assert n.next.data == 3
+    assert n.next.next is None

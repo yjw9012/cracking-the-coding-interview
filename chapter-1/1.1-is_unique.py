@@ -8,8 +8,9 @@ def is_unique(s):
 
     return True
 
-s = "abcdefghiajk";
-print(s + " is unique? " + str(is_unique(s)))
+if __name__ == "__main__":
+    s = "abcdefghiajk";
+    assert not is_unique(s)
 
-s = "abcdefghijklmnop";
-print(s + " is unique? " + str(is_unique(s)))
+    s = "abcdefghijklmnop";
+    assert is_unique(s)

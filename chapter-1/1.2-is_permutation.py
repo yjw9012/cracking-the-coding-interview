@@ -12,9 +12,11 @@ def is_permutation(s1, s2):
 
     return True
 
-s1 = "abcde"
-s2 = "bdcea"
-print(is_permutation(s1, s2))
+if __name__ == "__main__":
 
-s2 = "bdzea"
-print(is_permutation(s1, s2))
+    s1 = "abcde"
+    s2 = "bdcea"
+    assert is_permutation(s1, s2)
+
+    s2 = "bdzea"
+    assert not is_permutation(s1, s2)
